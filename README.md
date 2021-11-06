@@ -2,9 +2,11 @@
 
 ## Description
 
-(Source: Code Fellows 401 JS Lab 11 instructions)
+(Source: Code Fellows 401 JS Lab 12 instructions)
 
-**CAPS Phase 1:** Begin the build of an application for a company called CAPS - The Code Academy Parcel Service. In this sprint, we’ll build out a system that emulates a real world supply chain.
+**CAPS Phase 2:** Continue working on a multi-day build of our delivery tracking system, moving event management to socket.io.
+
+In this phase, we’ll be moving away from using Node Events for managing events, instead refactoring to using socket.io, which takes on some of the complexity we had to manage ourselves, and also works equally well between servers and with websites.
 
 CAPS will simulate a delivery service where vendors (such as flower shops) will ship products using our delivery service and when our drivers deliver them, be notified that their customers received what they purchased.
 
@@ -18,8 +20,7 @@ CAPS will simulate a delivery service where vendors (such as flower shops) will 
 
 - And as developers, here are some of the development stories that are relevant to the above.
 
-  - As a developer, I want to use industry standards for managing the state of each package.
-  - As a developer, I want to create an event driven system so that I can write code that happens in response to events, in real time.
+  - As a developer, I want to create network event driven system using Socket.io so that I can write code that responds to events originating from both servers and web applications
 
 ## Author
 
@@ -36,13 +37,13 @@ Tom McGuire - testing;
 
 ## Resources
 
-[Code Feloows 401: JS starter code](https://github.com/codefellows/seattle-javascript-401n19/tree/main/class-11/starter_code)
+[Code Fellows 401: JS Lab 12 starter code](https://github.com/codefellows/seattle-javascript-401n19/tree/main/class-12/starter_code)
 
-## Deployed Sites
+<!-- ## Deployed Sites -->
 
-Prod branch -- https://ayrat-auth-api-prod.herokuapp.com/
-Dev branch -- https://ayrat-auth-api-dev.herokuapp.com/
+<!-- Prod branch -- https://ayrat-auth-api-prod.herokuapp.com/
+Dev branch -- https://ayrat-auth-api-dev.herokuapp.com/ -->
 
 ## UML
 
-![lab11](./img/lab11.png)
+![lab11](./img/lab12.png)
