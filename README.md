@@ -2,25 +2,29 @@
 
 ## Description
 
-(Source: Code Fellows 401 JS Lab 12 instructions)
+(Source: Code Fellows 401 JS Lab 13 instructions)
 
-**CAPS Phase 2:** Continue working on a multi-day build of our delivery tracking system, moving event management to socket.io.
+**CAPS Phase 3:** Complete work on a multi-day build of our delivery tracking system, adding queued delivery.
 
-In this phase, we’ll be moving away from using Node Events for managing events, instead refactoring to using socket.io, which takes on some of the complexity we had to manage ourselves, and also works equally well between servers and with websites.
+In this phase, we’ll be adding a layer of complexity to our application. Rather than just “fire” events and hope that our vendors and drivers respond to them, we’re going to implement a “queue” system so that nothing gets lost. Every event sent will be logged and held onto by the server until the intended recipient acknowledges that they received the message. At any time, a subscriber can get all of the messages they might have missed.
 
-CAPS will simulate a delivery service where vendors (such as flower shops) will ship products using our delivery service and when our drivers deliver them, be notified that their customers received what they purchased.
+In this final phase, we’ll be building out the queue itself, getting our vendors subscribed to it, and focusing on just one event - delivered to set the pattern for subscribing to, and working with queues.
 
-- The following user/developer stories detail the major functionality for this phase of the project.
+- User/developer stories:
 
-  - As a vendor, I want to alert the system when I have a package to be picked up.
-  - As a driver, I want to be notified when there is a package to be delivered.
-  - As a driver, I want to alert the system when I have picked up a package and it is in transit.
-  - As a driver, I want to alert the system when a package has been delivered.
-  - As a vendor, I want to be notified when my package has been delivered.
+  - As a vendor, I want to “subscribe” to “delivered” notifications so that I know when my packages are delivered.
+  - As a vendor, I want to “catch up” on any “delivered” notifications that I might have missed so that I can see a complete log.
+  - As a driver, I want to “subscribe” to “pickup” notifications so that I know what packages to deliver.
+  - As a driver, I want to “catch up” on any “pickup” notifications I may have missed so that I can deliver everything.
+  - As a driver, I want a way to “scan” a delivery so that the vendors know when a package has been delivered.
 
-- And as developers, here are some of the development stories that are relevant to the above.
+- Developer stories
 
-  - As a developer, I want to create network event driven system using Socket.io so that I can write code that responds to events originating from both servers and web applications
+  - As a developer, I want to create a system of tracking who is subscribing to each event.
+  - As a developer, I want to place all inbound messages into a “queue” so that my application knows what events are to be delivered.
+  - As a developer, I want to create a system for communicating when events have been delivered and received by subscribers.
+  - As a developer, I want to delete messages from the queue after they’ve been received by a subscriber, so that I don’t re-send them.
+  - As a developer, I want to create a system for allowing subscribers to retrieve all undelivered messages in their queue.
 
 ## Author
 
@@ -28,8 +32,6 @@ Ayrat Gimranov
 
 ## Collaborators
 
-Alex White (instructor);
-Tom McGuire - testing;
 
 ## Version
 
@@ -37,7 +39,7 @@ Tom McGuire - testing;
 
 ## Resources
 
-[Code Fellows 401: JS Lab 12 starter code](https://github.com/codefellows/seattle-javascript-401n19/tree/main/class-12/starter_code)
+<!-- [Code Fellows 401: JS Lab 12 starter code](https://github.com/codefellows/seattle-javascript-401n19/tree/main/class-12/starter_code) -->
 
 <!-- ## Deployed Sites -->
 
@@ -46,4 +48,4 @@ Dev branch -- https://ayrat-auth-api-dev.herokuapp.com/ -->
 
 ## UML
 
-![lab11](./img/lab12.png)
+<!-- ![lab11](./img/lab12.png) -->
