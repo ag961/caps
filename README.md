@@ -35,7 +35,17 @@ Ayrat Gimranov
 
 ## Version
 
-1.0.0
+1.1.0
+
+There are two separate vendor files: vendor.js and vendor2.js that represent "acme-widgets" and "1-206-flowers".
+
+The order of running the apps are:
+
+1. hub.js
+2. driver.js
+3. vendor.js and vendor2.js
+
+Vendors will fire off events every 15 seconds each and place them in the queue, the driver
 
 ## Resources
 
